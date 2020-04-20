@@ -1,375 +1,724 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]>
+<html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <!--
-    Modified from the Debian original for Ubuntu
-    Last updated: 2016-11-16
-    See: https://launchpad.net/bugs/1288690
-  -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Apache2 Ubuntu Default Page: It works</title>
-    <style type="text/css" media="screen">
-  * {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-  }
+  <!--- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-  body, html {
-    padding: 3px 3px 3px 3px;
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    background-color: #D8DBE2;
+  <!-- CSS
+    ================================================== -->
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
 
-    font-family: Verdana, sans-serif;
-    font-size: 11pt;
-    text-align: center;
-  }
+  <!-- Script
+  ================================================== -->
+  <script src="js/modernizr.js"></script>
 
-  div.main_page {
-    position: relative;
-    display: table;
+  <!-- Favicons
+ ================================================== -->
+  <link rel="shortcut icon" href="favicon.svg">
 
-    width: 800px;
+</head>
 
-    margin-bottom: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 0px 0px 0px;
+<body>
 
-    border-width: 2px;
-    border-color: #212738;
-    border-style: solid;
+<!-- Header
+================================================== -->
+<header id="home">
+  <nav id="nav-wrap">
+    <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
-    background-color: #FFFFFF;
+    <ul id="nav" class="nav">
+      <li class="current"><a class="smoothscroll" href="#home">Главная</a></li>
+      <li><a class="smoothscroll" href="#about">О нас</a></li>
+      <li><a class="smoothscroll" href="#resume">Услуги</a></li>
+      <li><a class="smoothscroll" href="#portfolio">Портфолио</a></li>
+      <li><a class="smoothscroll" href="#testimonials">Отзывы</a></li>
+      <li><a class="smoothscroll" href="#contact">Контакты</a></li>
+    </ul> <!-- end #nav -->
+  </nav> <!-- end #nav-wrap -->
 
-    text-align: center;
-  }
+  <div class="row banner">
+    <div class="banner-text">
+      <h1 class="responsive-headline">Создаем сайты<br> для бизнеса</h1>
+      <h2 class="responsive-headline">CRM системы, настройка рекламы, маркетинг под ключ</h2>
+      <h3>От <span>1500 евро</span></h3>
+      <hr/>
+      <ul class="social">
+        <li><a href="#"><i class="fa fa-facebook" title="Facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" title="Twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" title="Instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="scrolldown">
+    <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+  </p>
+</header> <!-- Header End -->
 
-  div.page_header {
-    height: 99px;
-    width: 100%;
 
-    background-color: #F5F6F7;
-  }
-
-  div.page_header span {
-    margin: 15px 0px 0px 50px;
-
-    font-size: 180%;
-    font-weight: bold;
-  }
-
-  div.page_header img {
-    margin: 3px 0px 0px 40px;
-
-    border: 0px 0px 0px;
-  }
-
-  div.table_of_contents {
-    clear: left;
-
-    min-width: 200px;
-
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.table_of_contents_item {
-    clear: left;
-
-    width: 100%;
-
-    margin: 4px 0px 0px 0px;
-
-    background-color: #FFFFFF;
-
-    color: #000000;
-    text-align: left;
-  }
-
-  div.table_of_contents_item a {
-    margin: 6px 0px 0px 6px;
-  }
-
-  div.content_section {
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.content_section_text {
-    padding: 4px 8px 4px 8px;
-
-    color: #000000;
-    font-size: 100%;
-  }
-
-  div.content_section_text pre {
-    margin: 8px 0px 8px 0px;
-    padding: 8px 8px 8px 8px;
-
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
-
-    background-color: #F5F6F7;
-
-    font-style: italic;
-  }
-
-  div.content_section_text p {
-    margin-bottom: 6px;
-  }
-
-  div.content_section_text ul, div.content_section_text li {
-    padding: 4px 8px 4px 16px;
-  }
-
-  div.section_header {
-    padding: 3px 6px 3px 6px;
-
-    background-color: #8E9CB2;
-
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-  }
-
-  div.section_header_red {
-    background-color: #CD214F;
-  }
-
-  div.section_header_grey {
-    background-color: #9F9386;
-  }
-
-  .floating_element {
-    position: relative;
-    float: left;
-  }
-
-  div.table_of_contents_item a,
-  div.content_section_text a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div.table_of_contents_item a:link,
-  div.table_of_contents_item a:visited,
-  div.table_of_contents_item a:active {
-    color: #000000;
-  }
-
-  div.table_of_contents_item a:hover {
-    background-color: #000000;
-
-    color: #FFFFFF;
-  }
-
-  div.content_section_text a:link,
-  div.content_section_text a:visited,
-   div.content_section_text a:active {
-    background-color: #DCDFE6;
-
-    color: #000000;
-  }
-
-  div.content_section_text a:hover {
-    background-color: #000000;
-
-    color: #DCDFE6;
-  }
-
-  div.validator {
-  }
-    </style>
-  </head>
-  <body>
-    <div class="main_page">
-      <div class="page_header floating_element">
-        <img src="/icons/ubuntu-logo.png" alt="Ubuntu Logo" class="floating_element"/>
-        <span class="floating_element">
-          Apache2 Ubuntu Default Page
-        </span>
-      </div>
-<!--      <div class="table_of_contents floating_element">
-        <div class="section_header section_header_grey">
-          TABLE OF CONTENTS
+<!-- About Section
+================================================== -->
+<section id="about">
+  <div class="row">
+    <div class="three columns">
+      <img class="profile-pic" src="images/about-logo.svg" alt="Logo" title="Logo"/>
+    </div>
+    <div class="nine columns main-col">
+      <h2>О нас</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda aut consequuntur ducimus esse excepturi
+        facere facilis hic illum ipsam ipsum iusto non perferendis quasi qui, quos, repellendus. Cum maiores mollitia
+        pariatur quam quibusdam! Alias aliquid, atque odio provident soluta tempore vel! At atque, deleniti deserunt
+        impedit iure laborum obcaecati placeat possimus praesentium qui, quis repudiandae ullam velit! Ad at dolores
+        enim natus ratione rem soluta suscipit veniam! Ad commodi deserunt eos excepturi harum iste iure maiores minima
+        qui reprehenderit. Explicabo fugit iste iure libero magni maiores nostrum numquam officia praesentium, quae quas
+        quia, reiciendis similique sit suscipit tenetur vitae.
+      </p>
+      <div class="row">
+        <div class="columns contact-details">
+          <h2>Контактная информация</h2>
+          <p class="address">
+            <span>Company Name</span><br>
+            <span>Name street<br>Country Name</span><br>
+            <span>+123456789</span><br>
+            <span>info@domain.com</span>
+          </p>
         </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#about">About</a>
+        <!--<div class="columns download">
+          <p>
+            <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+          </p>
+        </div>-->
+      </div> <!-- end row -->
+    </div> <!-- end .main-col -->
+  </div>
+</section> <!-- About Section End-->
+
+
+<!-- Resume Section
+================================================== -->
+<section id="resume" class="services">
+
+  <div class="row education">
+    <div class="three columns header-col">
+      <h1><span>Service Name 1</span></h1>
+    </div>
+    <div class="nine columns main-col">
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Тут что-нибудь важное о данном сервисе в пару словах</h3>
+          <p class="info">Тут может что написать</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis
+            pretium.
+          </p>
         </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#changes">Changes</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#scope">Scope</a>
-        </div>
-        <div class="table_of_contents_item floating_element">
-          <a href="#files">Config files</a>
+      </div> <!-- item end -->
+
+      <!--   <div class="row item">
+
+           <div class="twelve columns">
+
+             <h3>School of Cool Designers</h3>
+             <p class="info">B.A. Degree in Graphic Design <span>&bull;</span> <em class="date">March 2003</em></p>
+
+             <p>
+               This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+               Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+               nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+               ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
+             </p>
+
+           </div>
+
+         </div>-->
+    </div> <!-- main-col end -->
+  </div> <!-- End Education -->
+
+  <div class="row work">
+    <div class="three columns header-col">
+      <h1><span>Service Name 2</span></h1>
+    </div>
+    <div class="nine columns main-col">
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Тут что-нибудь важное о данном сервисе в пару словах</h3>
+          <p class="info">Тут может что написать</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+            ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis
+            pretium.
+          </p>
         </div>
       </div>
--->
-      <div class="content_section floating_element">
+
+      <!--  <div class="row item">
+          <div class="twelve columns">
+
+            <h3>Super Cool Studio</h3>
+            <p class="info">UX Designer <span>&bull;</span> <em class="date">March 2007 - February 2010</em></p>
+
+            <p>
+              This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+              Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+              nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+              ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
+            </p>
+
+          </div>
+
+        </div>     -->
+    </div> <!-- main-col end -->
+  </div> <!-- End Work -->
+
+  <!--<div class="row skill">
+    <div class="three columns header-col">
+      <h1><span>Skills</span></h1>
+    </div>
+    <div class="nine columns main-col">
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam,
+        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+        ipsam
+        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt.
+      </p>
+      <div class="bars">
+
+        <ul class="skills">
+          <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
+          <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
+          <li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
+          <li><span class="bar-expand css"></span><em>CSS</em></li>
+          <li><span class="bar-expand html5"></span><em>HTML5</em></li>
+          <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+        </ul>
+      </div>&lt;!&ndash; end skill-bars &ndash;&gt;
+    </div> &lt;!&ndash; main-col end &ndash;&gt;
+  </div>-->
+
+</section> <!-- Resume Section End-->
 
 
-        <div class="section_header section_header_red">
-          <div id="about"></div>
-          It works!
-        </div>
-        <div class="content_section_text">
-          <p>
-                This is the default welcome page used to test the correct 
-                operation of the Apache2 server after installation on Ubuntu systems.
-                It is based on the equivalent page on Debian, from which the Ubuntu Apache
-                packaging is derived.
-                If you can read this page, it means that the Apache HTTP server installed at
-                this site is working properly. You should <b>replace this file</b> (located at
-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
-          </p>
+<!-- Portfolio Section
+================================================== -->
+<section id="portfolio">
+  <div class="row">
+    <div class="twelve columns collapsed">
+      <h1>Тут можно какие-нибудь фото о чем, ИЛИ партнеры либо клиенты (лого)</h1>
+      <!-- portfolio-wrapper -->
+      <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-01" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-02" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-03" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-04" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-05" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-06" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-07" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div> <!-- item end -->
+
+        <div class="columns portfolio-item">
+          <div class="item-wrap">
+
+            <a href="#modal-08" title="">
+              <img alt="" src="images/portfolio/into-the-light.jpg">
+              <div class="overlay">
+                <div class="portfolio-item-meta">
+                  <h5>Name</h5>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="link-icon"><i class="icon-plus"></i></div>
+            </a>
+
+          </div>
+        </div>  <!-- item end -->
+
+      </div> <!-- portfolio-wrapper end -->
+
+    </div> <!-- twelve columns end -->
 
 
-          <p>
-                If you are a normal user of this web site and don't know what this page is
-                about, this probably means that the site is currently unavailable due to
-                maintenance.
-                If the problem persists, please contact the site's administrator.
-          </p>
+    <!-- Modal onclick -->
 
-        </div>
-        <div class="section_header">
-          <div id="changes"></div>
-                Configuration Overview
-        </div>
-        <div class="content_section_text">
-          <p>
-                Ubuntu's Apache2 default configuration is different from the
-                upstream default configuration, and split into several files optimized for
-                interaction with Ubuntu tools. The configuration system is
-                <b>fully documented in
-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
-                documentation. Documentation for the web server itself can be
-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
-                package was installed on this server.
+    <div id="modal-01" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-01 End -->
 
-          </p>
-          <p>
-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
-          </p>
-          <pre>
-/etc/apache2/
-|-- apache2.conf
-|       `--  ports.conf
-|-- mods-enabled
-|       |-- *.load
-|       `-- *.conf
-|-- conf-enabled
-|       `-- *.conf
-|-- sites-enabled
-|       `-- *.conf
-          </pre>
-          <ul>
-                        <li>
-                           <tt>apache2.conf</tt> is the main configuration
-                           file. It puts the pieces together by including all remaining configuration
-                           files when starting up the web server.
-                        </li>
+    <div id="modal-02" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-02 End -->
 
-                        <li>
-                           <tt>ports.conf</tt> is always included from the
-                           main configuration file. It is used to determine the listening ports for
-                           incoming connections, and this file can be customized anytime.
-                        </li>
+    <div id="modal-03" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-03 End -->
 
-                        <li>
-                           Configuration files in the <tt>mods-enabled/</tt>,
-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
-                           particular configuration snippets which manage modules, global configuration
-                           fragments, or virtual host configurations, respectively.
-                        </li>
+    <div id="modal-04" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-04 End -->
 
-                        <li>
-                           They are activated by symlinking available
-                           configuration files from their respective
-                           *-available/ counterparts. These should be managed
-                           by using our helpers
-                           <tt>
-                                a2enmod,
-                                a2dismod,
-                           </tt>
-                           <tt>
-                                a2ensite,
-                                a2dissite,
-                            </tt>
-                                and
-                           <tt>
-                                a2enconf,
-                                a2disconf
-                           </tt>. See their respective man pages for detailed information.
-                        </li>
+    <div id="modal-05" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-05 End -->
 
-                        <li>
-                           The binary is called apache2. Due to the use of
-                           environment variables, in the default configuration, apache2 needs to be
-                           started/stopped with <tt>/etc/init.d/apache2</tt> or <tt>apache2ctl</tt>.
-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
-                           default configuration.
-                        </li>
+    <div id="modal-06" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Photography</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-06 End -->
+
+    <div id="modal-07" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-07 End -->
+
+    <div id="modal-08" class="popup-modal mfp-hide">
+      <img class="scale-with-grid" src="images/portfolio/modals/into-the-light.jpg" alt="" title=""/>
+      <div class="description-box">
+        <h4>Name</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, dolorem optio? Ab cumque incidunt modi
+          non nostrum possimus temporibus ut.</p>
+        <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
+      </div>
+      <div class="link-box">
+        <!--        <a href="http://www.behance.net">Details</a>-->
+        <a class="popup-modal-dismiss">Закрыть</a>
+      </div>
+    </div><!-- modal-01 End -->
+  </div> <!-- row End -->
+</section> <!-- Portfolio Section End-->
+
+<!-- Call Section -->
+<section id="call-to-action">
+  <div class="row">
+    <div class="two columns header-col">
+      <h1><span>Get Hosting.</span></h1>
+    </div>
+    <div class="seven columns">
+      <h2>Мы примем Ваш звонок</h2>
+      <p>Может что тут написать (Может время работы???)</p>
+    </div>
+    <div class="three columns action">
+      <a rel="nofollow"
+         href="tel:+123456789"
+         class="button">Позвонить</a>
+    </div>
+  </div>
+</section> <!-- Call-To-Action Section End-->
+
+
+<!-- Testimonials Section -->
+<!--<section id="testimonials">
+
+  <div class="text-container">
+
+    <div class="row">
+
+      <div class="two columns header-col">
+
+        <h1><span>Client Testimonials</span></h1>
+
+      </div>
+
+      <div class="ten columns flex-container">
+
+        <div class="flexslider">
+
+          <ul class="slides">
+
+            <li>
+              <blockquote>
+                <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                  to do what you believe is great work. And the only way to do great work is to love what you do.
+                  If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know
+                  when you find it.
+                </p>
+                <cite>Steve Jobs</cite>
+              </blockquote>
+            </li> &lt;!&ndash; slide ends &ndash;&gt;
+
+            <li>
+              <blockquote>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                </p>
+                <cite>Mr. Adobe</cite>
+              </blockquote>
+            </li> &lt;!&ndash; slide ends &ndash;&gt;
+
           </ul>
-        </div>
 
-        <div class="section_header">
-            <div id="docroot"></div>
-                Document Roots
-        </div>
+        </div> &lt;!&ndash; div.flexslider ends &ndash;&gt;
 
-        <div class="content_section_text">
-            <p>
-                By default, Ubuntu does not allow access through the web browser to
-                <em>any</em> file apart of those located in <tt>/var/www</tt>,
-                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>
-                directories (when enabled) and <tt>/usr/share</tt> (for web
-                applications). If your site is using a web document root
-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
-            </p>
-            <p>
-                The default Ubuntu document root is <tt>/var/www/html</tt>. You
-                can make your own virtual hosts under /var/www. This is different
-                to previous releases which provides better security out of the box.
-            </p>
-        </div>
+      </div> &lt;!&ndash; div.flex-container ends &ndash;&gt;
 
-        <div class="section_header">
-          <div id="bugs"></div>
-                Reporting Problems
-        </div>
-        <div class="content_section_text">
-          <p>
-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
-                Apache2 package with Ubuntu. However, check <a
-                href="https://bugs.launchpad.net/ubuntu/+source/apache2"
-                rel="nofollow">existing bug reports</a> before reporting a new bug.
-          </p>
-          <p>
-                Please report bugs specific to modules (such as PHP and others)
-                to respective packages, not to the web server itself.
-          </p>
-        </div>
+    </div> &lt;!&ndash; row ends &ndash;&gt;
+
+  </div>  &lt;!&ndash; text-container ends &ndash;&gt;
+
+</section>-->
+
+<!-- Contact Section -->
+<!--<section id="contact">
+
+  <div class="row section-head">
+
+    <div class="two columns header-col">
+
+      <h1><span>Get In Touch.</span></h1>
+
+    </div>
+
+    <div class="ten columns">
+
+      <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+        totam rem aperiam,
+        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+        ipsam
+        voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="eight columns">
+
+      &lt;!&ndash; form &ndash;&gt;
+      <form action="" method="post" id="contactForm" name="contactForm">
+        <fieldset>
+
+          <div>
+            <label for="contactName">Name <span class="required">*</span></label>
+            <input type="text" value="" size="35" id="contactName" name="contactName">
+          </div>
+
+          <div>
+            <label for="contactEmail">Email <span class="required">*</span></label>
+            <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+          </div>
+
+          <div>
+            <label for="contactSubject">Subject</label>
+            <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+          </div>
+
+          <div>
+            <label for="contactMessage">Message <span class="required">*</span></label>
+            <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+          </div>
+
+          <div>
+            <button class="submit">Submit</button>
+            <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+          </div>
+
+        </fieldset>
+      </form> &lt;!&ndash; Form End &ndash;&gt;
+
+      &lt;!&ndash; contact-warning &ndash;&gt;
+      <div id="message-warning"> Error boy</div>
+      &lt;!&ndash; contact-success &ndash;&gt;
+      <div id="message-success">
+        <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      </div>
+
+    </div>
 
 
+    <aside class="four columns footer-widgets">
 
+      <div class="widget widget_contact">
+
+        <h4>Address and Phone</h4>
+        <p class="address">
+          Jonathan Doe<br>
+          1600 Amphitheatre Parkway <br>
+          Mountain View, CA 94043 US<br>
+          <span>(123) 456-7890</span>
+        </p>
 
       </div>
-    </div>
-    <div class="validator">
-    </div>
-  </body>
-</html>
 
+      <div class="widget widget_tweets">
+
+        <h4 class="widget-title">Latest Tweets</h4>
+
+        <ul id="twitter">
+          <li>
+                        <span>
+                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+            <b><a href="#">2 Days Ago</a></b>
+          </li>
+          <li>
+                        <span>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi
+                        <a href="#">http://t.co/CGIrdxIlI3</a>
+                        </span>
+            <b><a href="#">3 Days Ago</a></b>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>-->
+
+<!-- footer -->
+<!--<footer>
+
+  <div class="row">
+
+    <div class="twelve columns">
+
+      <ul class="social-links">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+      </ul>
+
+      <ul class="copyright">
+        <li>&copy; 2014 CeeVee</li>
+        <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+        <li>Sponsored by <a rel="nofollow"
+                            href="http://www.a2hosting.com/?utm___source=styleshoutdemo&utm_medium=__cpm&utm_content=&utm_campaign=">A2Hosting</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+  </div>
+
+</footer>-->
+
+<!-- Java Script -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/magnific-popup.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+
+</html>
