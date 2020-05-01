@@ -419,7 +419,14 @@ img {
 
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a {
     font-family: "Raleway", sans-serif;
-    font-size: 28px;
+    /*font-size: 28px;*/
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-logo a .logo-main {
@@ -835,9 +842,16 @@ img {
     border: 2px solid #fff;
     border-radius: 50%;
     height: 100px;
-    left: 48%;
+    left: 0;
+    right: 0;
+    margin: auto;
     position: absolute;
-    top: 42%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); ;
     width: 100px;
     text-align: center;
 }
