@@ -4315,6 +4315,10 @@ img {
     #aa-header .aa-header-bottom .aa-cartbox .aa-cart-link {
         font-size: 20px;
     }
+
+    #menu .navbar-toggle {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 640px) {
