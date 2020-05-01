@@ -989,8 +989,9 @@ img {
 
 #aa-promo {
     float: left;
-    display: inline;
+    /*display: inline;*/
     width: 100%;
+    display: none;
 }
 
 #aa-promo .aa-promo-area {
